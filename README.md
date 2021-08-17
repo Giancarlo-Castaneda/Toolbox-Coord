@@ -1,6 +1,6 @@
 # Toolbox+Coordinator
 
-## Movies Information app
+## Carousel list app
 
 App to show Information about a list of carousels
 
@@ -28,6 +28,14 @@ Save information in the cache: implemented using the Moya / Alamofire configurat
 - Add a detail to each item in the carousel
 - Use reactive programming
 - Add Video Playback
+
+## Instructions
+Follow the instructions below to compile the app:
+
+- Once the app is opened in xcode, you should wait a few minutes while the Swift Package Manager configures the libraries used
+- Then possibly xcode asks to configure a developer account that allows compiling the app
+
+Finaly enjoy the app :D
 
 ## Link to public profile
 
