@@ -28,26 +28,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IKJ-yL-2cP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezL-Zq-0r1">
-                                <rect key="frame" x="163.5" y="802" width="87" height="30"/>
-                                <state key="normal" title="Autenticarse"/>
+                                <rect key="frame" x="138" y="790" width="138" height="42"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Authenticate">
+                                    <color key="titleColor" red="0.40000000000000002" green="0.36862745099999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" systemColor="systemRedColor"/>
+                                </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carousel App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGh-q0-fQV">
+                                <rect key="frame" x="15" y="64" width="384" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.36862745099999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="IKJ-yL-2cP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6Zk-37-o0t"/>
+                            <constraint firstAttribute="bottom" secondItem="IKJ-yL-2cP" secondAttribute="bottom" id="AVj-sQ-0RJ"/>
+                            <constraint firstItem="dGh-q0-fQV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Fsj-ek-ahm"/>
                             <constraint firstItem="ezL-Zq-0r1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fw1-kt-hyd"/>
+                            <constraint firstItem="dGh-q0-fQV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="GWk-5l-S7K"/>
+                            <constraint firstItem="dGh-q0-fQV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PVb-Yz-PJe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ezL-Zq-0r1" secondAttribute="bottom" constant="30" id="Rc9-0k-voV"/>
+                            <constraint firstAttribute="trailing" secondItem="IKJ-yL-2cP" secondAttribute="trailing" id="VW8-Of-yUK"/>
+                            <constraint firstItem="IKJ-yL-2cP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mp3-qO-cyU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dGh-q0-fQV" secondAttribute="trailing" constant="15" id="vMQ-sK-nZp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GAS-Gq-TBM"/>
                     <connections>
+                        <outlet property="backgroundImage" destination="IKJ-yL-2cP" id="RXa-n5-hmI"/>
                         <outlet property="loginButton" destination="ezL-Zq-0r1" id="oRe-xe-EA9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141" y="88"/>
+            <point key="canvasLocation" x="140.57971014492756" y="87.723214285714278"/>
         </scene>
         <!--Carousel View Controller-->
         <scene sceneID="4hI-pc-NUd">
@@ -166,8 +189,14 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
