@@ -21,7 +21,7 @@ class CarouselViewController: UIViewController, StoryboardInitializable {
         // Do any additional setup after loading the view.
         carouselListTable.register(UINib(nibName: "CarouselListItemCell", bundle: nil), forCellReuseIdentifier: CarouselListItemCell.identifier)
         carouselListTable.estimatedRowHeight = 200
-        
+        carouselListTable.tableFooterView = UIView()
         setUpBinds()
     }
 
