@@ -29,7 +29,6 @@ extension LoginViewController {
             .subscribe(onNext: { () in
                 self.viewModel.getAuth.onNext(())
             })
-//            .bind(to: viewModel.getAuth)
             .disposed(by: self.disposeBag)
     }
 }

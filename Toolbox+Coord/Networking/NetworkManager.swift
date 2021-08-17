@@ -30,7 +30,6 @@ class NetworkManager {
         reachabilityManager?.startListening(onUpdatePerforming: { status in
             switch status {
             case .notReachable, .unknown:
-//                UIApplication.shared.keyWindow?.rootViewController?.getTopMostViewController()?.showAlert("Error", message: "Not Internet Connection", buttonText: "OK")
                 print("The network is not reachable")
             case .reachable(.ethernetOrWiFi), .reachable(.cellular):
                 print("The network is reachable over the WiFi connection")

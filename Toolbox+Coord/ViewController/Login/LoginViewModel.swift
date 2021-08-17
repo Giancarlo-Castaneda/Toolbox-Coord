@@ -20,8 +20,7 @@ public class LoginViewModel {
         self.getAuth = _getAuth.asObserver()
         
         self.authResult = _getAuth.flatMapLatest({ (_) -> Observable<AuthModel> in
-            let aaaaa = Api.requestService(endpoint: .login, model: AuthModel())
-            return aaaaa
+            return Api.requestService(endpoint: .login, model: AuthModel())
         })
     }
 }

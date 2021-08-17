@@ -75,7 +75,7 @@ extension Api: TargetType {
         }
         
     }
-//    let asd ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJUb29sYm94TW9iaWxlVGVzdCIsIm5hbWUiOiJUb29sYm94IEF1dGggdGVzdCIsImlhdCI6MTYyOTEzMTU0NywiZXhwaXJlRGF0ZSI6IjIwMjEtMDgtMTZUMTY6MzI6MjcuNjA2WiJ9.IMdE25WPjLkQm9fs6O3Vf3SFzjtz_KJObmyID4UFVyo"
+    
     var headers: [String : String]? {
         switch self {
         case .login:
