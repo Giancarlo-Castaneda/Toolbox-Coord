@@ -35,7 +35,7 @@ class CarouselCell: UICollectionViewCell {
             options: [
                 .processor(processor),
                 .scaleFactor(UIScreen.main.scale),
-                .transition(.fade(0.5)),
+                .transition(.fade(0.3)),
                 .cacheOriginalImage,
                 .memoryCacheExpiration(.expired),
                 .diskCacheExpiration(.expired)

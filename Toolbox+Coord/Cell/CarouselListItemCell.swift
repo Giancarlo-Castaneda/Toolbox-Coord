@@ -12,9 +12,11 @@ class CarouselListItemCell: UITableViewCell {
 
     @IBOutlet weak var caruoselTypeLabel: UILabel!
     @IBOutlet weak var carouselCollectionView: UICollectionView!
+    @IBOutlet weak var collectionHeight: NSLayoutConstraint!
     var carouselItem = PublishSubject<[CarouselItem]>()
     var onSelected = PublishSubject<CarouselItem>()
     private let disposeBag = DisposeBag()
+    private var currentItem: CarosuelResponse?
     
     static var identifier: String {
         return String(describing: self)
@@ -45,14 +47,20 @@ class CarouselListItemCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(with carusel: CarosuelResponse) {
-        caruoselTypeLabel.text = "Carousel type: "+carusel.type
-        carouselItem.onNext(carusel.items)
+    private func getCollectionHeight(type: String) -> CGFloat {
+        return type == "thumb" ? 200 : 300
+    }
+    
+    func configureCell(with carousel: CarosuelResponse) {
+        currentItem = carousel
+        caruoselTypeLabel.text = "Carousel type: "+carousel.type
+        collectionHeight.constant = getCollectionHeight(type: carousel.type)
+        carouselItem.onNext(carousel.items)
     }
 }
 
 extension CarouselListItemCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width*0.7, height: 200)
+        return CGSize(width: UIScreen.main.bounds.width*0.7, height: getCollectionHeight(type: currentItem?.type ?? ""))
     }
 }

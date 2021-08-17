@@ -54,6 +54,7 @@
             <connections>
                 <outlet property="carouselCollectionView" destination="igf-4g-dcx" id="xxc-m5-ARn"/>
                 <outlet property="caruoselTypeLabel" destination="KKL-YY-n88" id="DpS-cQ-3lQ"/>
+                <outlet property="collectionHeight" destination="geO-VM-pyZ" id="9bQ-OL-53h"/>
             </connections>
             <point key="canvasLocation" x="-50.724637681159422" y="147.65625"/>
         </tableViewCell>
